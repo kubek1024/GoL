@@ -1,4 +1,4 @@
 GoL
 ===
 
-wersja w blenderze
+wersja w QT
