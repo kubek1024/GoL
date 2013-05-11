@@ -2,6 +2,8 @@
 #define ZYCIE_H
 
 #include <QWidget>
+#include <QPainter>
+#include <QColor>
 
 class Zycie : public QWidget
 {
@@ -10,8 +12,15 @@ public:
     explicit Zycie(QWidget *parent = 0);
 
 private:
-    bool tablicaKomurek[100][100];
+    bool tablicaKomorek[100][100];
     QTimer* timer;
+
+    void malujPiksele(QPainter &p);
+
+
+protected:
+    void mousePressEvent(QMouseEvent *e);
+    void paintEvent(QPaintEvent *);
     
 signals:
     
