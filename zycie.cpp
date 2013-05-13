@@ -3,14 +3,21 @@
 Zycie::Zycie(QWidget *parent) :
     QWidget(parent)
 {
-    //memset(&tablicaKomorek, false, sizeof(100));
+    memset(&tablicaKomorek, false, sizeof(99));
 
-/*
-    tablicaKomorek[0][0]=true;
-    tablicaKomorek[0][1]=true;
-    tablicaKomorek[0][2]=true;
-    tablicaKomorek[0][3]=true;
-    */
+
+    for(int k = 0; k <= 99; k++) {
+        for(int j = 0; j <= 99; j++) {
+            tablicaKomorek[k][j] = false;
+        }
+    }
+
+    tablicaKomorek[1][0]=true;
+    tablicaKomorek[1][1]=true;
+    tablicaKomorek[1][2]=true;
+    tablicaKomorek[1][3]=true;
+
+
 }
 
 
