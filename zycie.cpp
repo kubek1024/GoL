@@ -32,16 +32,19 @@ void Zycie::paintEvent(QPaintEvent *)
 
 void Zycie::malujPiksele(QPainter &p)
 {
-    double szkerokosc= (double)width()/100;
+    double szerokosc = (double)width()/100;
     double wysokosc= (double)height()/100;
 
     for(int i=1; i<100;i++)
     {
-        for(int j=1; i<100;i++)
+        for(int j=1; j<100;j++)
         {
             if(tablicaKomorek[i][j]==true)
             {
-
+                qreal left = (qreal)(szerokosc*j-szerokosc); // margin from left
+                qreal top  = (qreal)(wysokosc*i-wysokosc); // margin from top
+                QRectF r(left, top, (qreal)szerokosc, (qreal)wysokosc);
+                p.fillRect(r, QBrush(m_masterColor)); // fill cell with brush of main color
 
             }
 

@@ -29,6 +29,8 @@ private:
     QPushButton *startGuzik;
     QPushButton *stopGuzik;
 
+
+
 };
 
 #endif // MAINWINDOW_H

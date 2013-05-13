@@ -17,6 +17,8 @@ private:
 
     void malujPiksele(QPainter &p);
 
+    QColor m_masterColor;
+
 
 protected:
     void mousePressEvent(QMouseEvent *e);
