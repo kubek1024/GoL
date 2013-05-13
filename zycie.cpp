@@ -5,6 +5,7 @@ Zycie::Zycie(QWidget *parent) :
 {
     memset(&tablicaKomorek, false, sizeof(99));
 
+    rozmiar=100;
 
     for(int k = 0; k < 100; k++) {
         for(int j = 0; j < 100; j++) {
@@ -23,6 +24,12 @@ Zycie::Zycie(QWidget *parent) :
 
 void Zycie::mousePressEvent(QMouseEvent *e)
 {
+    double szer = (double)width()/rozmiar;
+    double wys = (double)height()/rozmiar;
+    int k = floor(e->y()/wys)+1;
+    int j = floor(e->x()/szer)+1;
+    tablicaKomorek[k][j] = !tablicaKomorek[k][j];
+    update();
 
 
 

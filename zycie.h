@@ -4,6 +4,13 @@
 #include <QWidget>
 #include <QPainter>
 #include <QColor>
+#include <QMouseEvent>
+#include <QMessageBox>
+#include <QTimer>
+#include <QDebug>
+#include <QRectF>
+#include <QPainter>
+#include <qmath.h>
 
 class Zycie : public QWidget
 {
@@ -18,6 +25,7 @@ private:
     void malujPiksele(QPainter &p);
 
     QColor m_masterColor;
+    int rozmiar;
 
 
 protected:
